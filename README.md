@@ -1,5 +1,6 @@
 # golf-flax
-A golfed version of the Flax module API. 
+
+A golfed version of the Flax module API. Implementd in 20 lines. Fully compatable with JAX. Supports module inlining.
 
 ```python
 import numpy as np
