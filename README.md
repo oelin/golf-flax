@@ -5,9 +5,6 @@ A golfed version of the Flax module API. Implementd in 20 lines. Fully compatabl
 ## Implementation
 
 ```python
-import numpy as np
-from dataclasses import dataclass
-
 def State(state):
   return state | {'index': 0, 'scope': ()}
 
