@@ -39,10 +39,6 @@ def MLP(state, x):
 
     return state, x
 
-## Future
-
-Hoping to make this even more compact by merging `x` and `state`.
-
 # Initialization.
 
 state, x = MLP(State({}), jnp.ones((2, 2)))
