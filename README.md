@@ -34,8 +34,8 @@ import nn
 
 @model
 def MLP(state, x):
-    state, x = nn.Linear(2, 2)(ctx, x)
-    state, x = nn.Linear(2, 1)(ctx, x)
+    state, x = nn.Linear(2, 2)(state, x)
+    state, x = nn.Linear(2, 1)(state, x)
 
     return state, x
 
@@ -45,7 +45,7 @@ Hoping to make this even more compact by merging `x` and `state`.
 
 # Initialization.
 
-x, state = MLP(State({}), jnp.ones((2, 2)))
+state, x = MLP(State({}), jnp.ones((2, 2)))
 
 # Inference.
 
