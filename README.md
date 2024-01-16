@@ -14,7 +14,7 @@ def model(apply):
     state1 = state | {'index': state['index'] + 1}
     state2, x = apply(state | {'scope': state['scope'] + (state['index'],)}, x)
     
-    return state1 | state2, x
+    return state2 | state1, x
   return model
 
 @model
